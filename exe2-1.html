@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스타일의 종류</title>
+  
+  <!-- 내부스타일 -->
+  <style>
+    /* 0순위 */
+    *{color:magenta !important;}
+    /* 1순위    */
+    #list03{color:blue;}
+    /* 2순위 */
+    .list{color:green;}
+    /* 3순위 */
+    li{color:blue;}
+    /* 4순위 */
+    *{color:black;}
+
+  </style>
+  <!-- 외부스타일 -->
+  <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+  
+</head>
+<body>
+  <h1>스타일의 종류</h1>
+  <ol>
+    <li id="list01" class="list" style="color:red;">인라인스타일</li>
+    <li id="list02" class="list">내부스타일</li>
+    <li id="list03" class="list">외부스타일</li>
+  </ol>
+</body>
+</html>
