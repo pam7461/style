@@ -1,0 +1,31 @@
+:root{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight:400;
+  font-size:14px;
+  font-style:normal;
+}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+h1,h2,h3,h4,h5,h6,strong,b{
+  font-weight:inherit;
+}
+h1,h2,h3,h4,h5,h6{
+  font-size:inherit;
+}
+address,i,em{
+  font-style:inherit;
+}
+a{
+  color:#000;
+  text-decoration:none;
+}
+ul,ol,li{
+  list-style:none;
+}
+img{
+  width:100%;
+  vertical-align:bottom;
+}
