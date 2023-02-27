@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경(background)</title>
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    .box{
+      width:200px;
+      height:200px;
+      margin:20px auto;
+      border:1px solid red
+    }
+    /* 박스1 색상 */
+    .box01{
+      background-color:#f00;
+    }
+    /* 박스2 이미지 */
+    .box02{
+      background-image:url(./img/ani_spade.png);
+    }
+    /* 박스3 반복유무 */
+    .box03{
+      background-image:url(./img/ani_spade.png);
+      background-repeat:no-repeat;
+    }
+    /* 박스4 사이즈 */
+    .box04{
+      background-image:url(./img/insure.png);
+      background-repeat:no-repeat;      
+      background-size:cover;
+      /* background-size:contain; */
+    }
+    /* 박스5 위치 */
+    .box05{
+      background-image:url(./img/insure.png);
+      background-repeat:no-repeat;
+      background-size:cover;
+      background-position:left top;
+    }
+    /* 박스6 위치 */
+    .box06{
+      background-image:url(./img/ani_spade.png);
+      background-repeat:no-repeat;
+      background-position:center;      
+    }
+    /* 박스7 숏형 */
+    .box07{
+      /* background-color:#0f0; */
+      /* background-image:url(./img/ani_spade.png); */
+      /* background-repeat:no-repeat; */
+      /* background-position:right center; */
+      background:#0f0 url(./img/ani_spade.png) no-repeat 20px 40px;
+      background-size:50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="box box01"></div>
+  <div class="box box02"></div>
+  <div class="box box03"></div>
+  <div class="box box04"></div>
+  <div class="box box05"></div>
+  <div class="box box06"></div>
+  <div class="box box07"></div>
+  <div class="box box08"></div>
+  <div class="box box09"></div>
+  <div class="box box10"></div>
+</body>
+</html>

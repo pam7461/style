@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자의 종류</title>
+  <style>
+    ol>li:nth-child(3){
+      color:red;
+    }
+    ol>li:last-child{
+      color:red;
+    }
+    ol>li:nth-of-type(3){
+      color:green;
+    }
+    ol>li:last-of-type{
+      color:green;
+    }
+    li[class]{
+      color:cyan;
+    }
+    li[title]{
+      color:magenta;
+    }
+    ol>li[class*="li03"]{
+      color:darkred;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>선택자의 종류</h1>
+  <hr>
+  <ol>    
+    <li class="li li01" style="color:yellow;">아이디선택자(#ID)</li>
+    <li class="li li02" title="클래스 선택자">클래스선택자(.CLASS)</li>
+    <li class="li li03">타입선택자(TAG)</li>    
+    <li class id="list">모든선택자(*)</li>
+    <li>
+      자손선택자(SPACE)
+      <ul>
+        <li>a b</li>
+        <li>.a b</li>
+        <li>a #b</li>
+      </ul>
+    </li>
+    <li>
+      자식선택자(>)
+      <ul>
+        <li>a>b</li>
+        <li>.a>b</li>
+        <li>a>#b</li>
+      </ul>
+    </li>
+    <li>
+      그룹선택자(,)
+      <ul>
+        <li>a,b</li>
+        <li>.a,b</li>
+        <li>a,#b</li>
+      </ul>
+    </li>  
+    <li>가상선택자(:-child, :-of-type)</li>  
+    <li>동생선택자(+,~)</li>
+    <li>속성선택자([속성])</li>
+    <li><a href="#">가상요소</a></li>
+  </ol>
+</body>
+</html>

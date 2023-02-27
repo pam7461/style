@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>레이아웃1</title>
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    .clearfix::after{
+      content:'';
+      display:block;
+      clear:both;
+    }
+    header{
+      width:960px;
+      margin:0 auto;
+      /* padding:20px; */
+      border:2px solid red;
+    }
+    h1,nav{
+      float:left;
+    }
+    h2{
+      float:right;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="clearfix">
+      <h1>제목</h1>
+      <nav>네비</nav>
+      <h2>오른쪽</h2>
+    </div>
+  </header>
+  <section>
+    섹션
+  </section>
+  
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상선택자/가상요소선택자</title>
+  <style>
+    /* a{
+      color:red;
+    } */
+    a:link{
+      color:green;
+    }
+    a:visited{
+      color:blue;
+    }
+    a:active{
+      color:magenta;
+    }
+    /* body>:hover{
+      color:darkblue;
+    } */
+    
+    :focus{
+      border:5px solid red;
+      outline:none;
+    }
+    .btn{
+      width:100px;
+    }
+    .dot,.btn::before,.btn::after{
+      display:inline-block;
+      width:20px;
+      height:20px;      
+      border-radius:50%;      
+      background-color:#000;
+      font-size:0;
+    }
+
+    .btn::before,.btn::after{
+      content:''; 
+      display:inline-block;
+    }
+    input{
+      color:red;
+    }
+    input::placeholder{
+      color:blue;
+    }
+    .txt{
+      color:cyan;
+    }
+    .txt::first-letter{
+      color:red;
+      font-size:50px;
+    }
+    .txt::first-line{
+      color:blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>가상선택자/가상요소선택자</h1>
+  <h2>가상선택자</h2>
+  <p>"<strong> : </strong>" 로 시작</p>
+  <p><a href="https://www.dsierjs.com">:link(링크 방문전)</a></p>
+  <p><a href="#">:visited(링크 방문후)</a></p>
+  <p><a href="#">:active(링크 활성화)</a></p>
+  <p><a href="#">:hover(마우스 오버)</a></p>
+  <p><a href="#">:focus</a></p> 
+  <input type="text" placeholder="이곳에 글을 입력하세요"> 
+  <br>
+  <hr>
+  <br>
+  <h2>가상요소 선택자</h2>
+  <div class="btn">  
+    <!-- 가상요소    -->
+    <div class="dot">네비버튼</div>    
+    <!-- 가상요소    -->
+  </div>  
+  <input type="text" placeholder="여기에 입력하세요">
+  <p class="txt">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit odit, nostrum soluta repellendus illum rerum, ut ipsa totam rem cum quo blanditiis officia aut, aspernatur asperiores deleniti quibusdam dolores veniam.
+    Error distinctio nam dicta aliquam delectus excepturi dolor esse numquam, saepe, facere earum obcaecati cupiditate laborum vitae nesciunt laudantium adipisci doloremque! Veniam ullam itaque sapiente totam id, quidem nobis sit.
+    Expedita adipisci incidunt ducimus temporibus, a quas repellat repellendus non dolore reprehenderit atque iusto voluptates, officia, sit illum! Temporibus laudantium tempore expedita doloremque minus cumque modi natus excepturi saepe aliquid?
+  </p>
+</body>
+</html>
+
+
