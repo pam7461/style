@@ -14,13 +14,101 @@
   <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
   <!-- 스타일 -->
   <link rel="stylesheet" href="./css/reset.css">
-  <!-- 폰트 -->
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"> -->
 
   <title>웹표준문서(Web Standard)</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
     
+    :root{
+      font-family:'Noto Sans KR',sans-serif;
+      font-weight:400;
+      font-size:14px;
+    }
+    .clearfix::after{
+      content:'';
+      display:block;
+      clear:both;
+    }
+    .skip-menu{
+      display:none;
+    }
+    .wrap{      
+      overflow:hidden;
+    }
+    .header{
+      border-bottom:1px solid transparent;
+      padding:20px 0;
+    }
+    .header:hover{
+      border-color:#ccc;
+    }
+    .header>.container{
+      width:960px;
+      margin:0 auto;      
+    }
+    h1,nav{
+      float:left;
+      width:10.41666666666667%;
+    }
+    nav{
+      width:72.91666666666667%;
+      padding:20px 100px 0;      
+    }
+    .nav-quick{
+      float:right;
+      width:16.66666666666667%;
+      padding:20px 0;
+    }
+    h1>a{
+      display:block;      
+      height:46px;
+      background:url('./images/logo.jpg') no-repeat center;
+      background-size:contain;
+      text-indent:-99999px;
+    }
+    ul.nav-main>li{
+      float:left;
+      margin-right:30px;
+      font-size:1.1em;
+    }
+    ul.nav-main>li:last-of-type{
+      margin-right:0;
+    }
+    .nav-sub{
+      display:none;
+    }
+    .nav-quick>li{
+      float:left;
+    }
+    .nav-quick>li:nth-child(1){
+      display:none;
+    }
+    .nav-quick>li:nth-child(2){
+      width:110px;
+      height:30px;
+      border-radius:15px;
+      padding-left:40px;
+      background:green url(./images/ico_header_virtual.png) no-repeat 10px center;
+      background-size:20%;
+      font-size:12px;
+      line-height:30px;
+    }
+    .nav-quick>li:nth-child(2)>a{
+      color:#fff;
+    }
+    .nav-quick>li:last-child{
+      float:right;
+      width:30px;
+      height:30px;
+      border-radius:15px;
+      background-color:blue;
+      font-size:6px;      
+      text-align:center;
+      line-height:30px;
+    }
+    .nav-quick>li:last-child>a{
+      color:#fff;
+    }
   </style>
 
 </head>
@@ -32,13 +120,13 @@
   </section>
   <section class="wrap">
     <header class="header">
-      <div class="container">
+      <div class="container clearfix">
           <!-- 문서제목 스타일 로고 체인지 -->
         <h1><a href="#">한솔제지</a></h1>
         <!-- 네비게이션 -->
         <nav>
             <!-- 메인네비 -->
-          <ul class="nav-main">
+          <ul class="nav-main clearfix">
             <li>
               <a href="#">제품소개</a>
               <ul class="nav-sub">
@@ -96,7 +184,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="nav-quick">
+        <ul class="nav-quick clearfix">
           <li><a href="#">고객문의</a></li>
           <li><a href="#">가상전시관</a></li>
           <li><a href="#">Eng</a></li>
