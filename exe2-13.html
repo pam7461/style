@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform(변형)</title>
+  <style>
+    h1{
+      transform:scale(.1);
+    }
+    
+    .par>div{
+      width:150px;
+      padding:20px;
+      text-align:center;
+      background:red;
+      transition:transform 0.5s;      
+    }
+    .par:hover>div.rot{
+      transform:rotate(-20deg);
+      transform:rotateX(50deg);
+      transform:rotateY(50deg);
+    }
+    .par:hover>div.sc{
+      transform:scale(.5);
+    }
+    .par:hover>div.sk{
+      transform:skew(20deg);
+    }
+  </style>
+</head>
+<body>
+  <h1>transform</h1>
+  <h2>rotage 20deg</h2>
+  <div class="par">
+    <div class="rot">안녕</div>
+  </div>
+  <h2>scale 1.5배</h2>
+  <div class="par">
+    <div class="sc">안녕</div>
+  </div>
+  <h2>skew 20deg</h2>
+  <div class="par">
+    <div class="sk">안녕</div>
+  </div>
+</body>
+</html>

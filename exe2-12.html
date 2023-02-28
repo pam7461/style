@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포지션을 이용한 슬라이더</title>
+  <style>
+    .slider{
+      width:600px;
+      height:300px;
+      margin:0 auto;
+      border:1px solid black;
+      position:relative;
+      overflow:hidden;
+    }
+    .item{
+      width:100%;
+      height:100%;
+      position:absolute;
+      left:0;
+      top:0;
+      opacity:0;      
+    }
+    .item01{
+      background:red;
+    }
+    .item02{
+      background:green;
+    }
+    .item03{
+      background:blue;
+    }
+    .item04{
+      background:cyan;
+    }
+    .item05{
+      background:magenta;
+    }
+    input{
+      position:absolute;
+      left:100px;
+      bottom:50px;
+      z-index:2;
+    }
+    #chk02{
+      left:120px;
+    }
+    #chk03{
+      left:140px;
+    }
+    #chk04{
+      left:160px;
+    }
+    #chk05{
+      left:180px;
+    }
+    .item{      
+      opacity:0;
+      transition:opacity 1s;
+    }
+    input:checked+.item{
+      opacity:1;
+      z-index:1;
+    }
+  </style>
+</head>
+<body>
+  <h1>슬라이더</h1>
+  <div class="slider">
+    <input type="radio" name="chk" id="chk01">
+    <div class="item item01"></div>        
+    <input type="radio" name="chk" id="chk02">
+    <div class="item item02"></div> 
+    <input type="radio" name="chk" id="chk03">
+    <div class="item item03"></div> 
+    <input type="radio" name="chk" id="chk04">
+    <div class="item item04"></div>  
+    <input type="radio" name="chk" id="chk05" checked>
+    <div class="item item05"></div>    
+  </div>
+</body>
+</html>

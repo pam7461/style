@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포지션(position)</title>
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+    .pos{
+      border:2px solid lightgreen;
+      padding:10px;
+    }
+    .static{
+      position:static;
+    }
+    /* 화면기준 */
+    .fixed{
+      position:fixed;
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
+    }
+    .par{
+     
+      margin:20px auto;
+      border:1px solid blue;
+      position:fixed;
+      left:50px;
+      right:50px;
+      top:50px;
+      bottom:50px;
+    }
+    .absolute{
+      position:absolute;
+      border-color:red;
+      right:0;
+      bottom:0;
+    }
+    .rel{
+      position:relative;
+      width:300px;
+      height:300px;
+      margin:20px auto;
+      background:yellow;
+      overflow:hidden;
+    }
+    .rel .pos{
+      width:100%;
+      height:100%;
+      position:absolute;
+      left:0%;
+    }
+  </style>
+</head>
+<body>
+  <h1>포지션</h1>
+  <h2>sticky</h2>
+  <div class="pos sticky">sticky는 정해진 위치에 가면 고정된다</div>
+  <hr>
+  <h2>static</h2>  
+  <div class="pos static">static는 원래 위치에 있을 것 입니다.</div>
+  <hr>
+  <h2>fixed</h2>
+  <div class="pos fixed">fixed <strong>화면은 기준</strong>으로 정해진 자리에 위치 할 것입니다.</div>
+  <hr>
+  <h2>absolute</h2>
+  <div class="par">
+    <div class="pos absolute">absolute <strong>조상중 가장 가까운 position을 기준</strong>으로 정해진 자리에 위치 할 것입니다.</div>
+  </div>
+  <hr>
+  <h2>relative/absolute</h2>
+  <div class="rel">
+    <div class="pos">렐라티브를 기준</div>
+  </div> 
+</body>
+</html>

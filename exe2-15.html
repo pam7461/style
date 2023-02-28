@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션</title>
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+    .ground{
+      width:520px;
+      height:320px;
+      margin:20px auto;
+      border:10px solid black;
+    }
+    .ball{
+      width:50px;
+      height:50px;      
+      border:2px solid red;
+      background:red;
+
+      
+      animation-name:ani-move;
+      animation-duration:10s;
+      animation-timing-function:linear;
+      animation-delay:1s;
+      /* 반복횟수 */
+      animation-iteration-count:2;
+      animation-iteration-count:infinite;
+      animation-iteration-count:1;
+      /* 방향 */
+      animation-direction:alternate-reverse;
+      animation-direction:alternate;
+      animation-direction:reverse;
+      animation-direction: normal;
+      /* 마지막상태 */
+      animation-fill-mode:forwards; 
+      
+      /* 축양형 */
+      animation: ani-move 10s linear 1s infinite alternate;
+    }
+    .ball:hover,input:checked+.ground>.ball{
+      /* 멈춤 */
+      animation-play-state:paused;
+    }
+    
+    /* 애니메이션 */
+    @keyframes ani-move {
+      0%{margin:0;background:red;transform:rotate(0deg);}
+      25%{margin:0 0 0 450px;background:green;transform:rotate(720deg)}
+      50%{margin:250px 0 0 450px;background:blue;}
+      75%{margin:250px 0 0 0;background:cyan;}
+      100%{margin:0;background:magenta;}
+    }
+    @keyframes ani-move2 {
+      0%{margin:0;}
+      25%{margin:100px;}
+      50%{margin:200px;}
+      75%{margin:300px;}
+      100%{margin:0;}
+    }
+    .box{
+      width:50px;
+      height:50px;
+      border:5px solid transparent;
+      border-radius:50%;
+      border-top-color:black;
+      position:fixed;
+      left:50%;
+      top:50%;
+      animation:inf-rot 1s linear 0s infinite normal forwards;
+    }
+    @keyframes inf-rot {
+      0%{transform:rotate(0deg);}
+      50%{transform:rotate(180deg);}
+      100%{transform:rotate(360deg);}
+    }
+  </style>
+</head>
+<body>
+  멈춤 
+  <input type="checkbox" checked>
+  
+  <div class="ground">
+    <div class="ball"></div>
+  </div>
+
+  <div class="box">
+
+  </div>
+</body>
+</html>

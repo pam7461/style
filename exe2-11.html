@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>할리스</title>
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+      text-align:center;
+      font-size:50px;
+    }
+    .skip>a{
+      display:block;
+      width:200px;
+      border:1px solid black;
+      padding:5px;
+      color:#fff;
+      background:#aaa;
+      text-decoration:none;
+      text-align:center;
+      position:fixed;
+      left:50px;
+      top:-200px;
+    }
+    .skip>a:focus{
+      top:0;
+    }
+    header{
+      padding:30px;
+      background-color:red;
+      position:fixed;
+      left:0;
+      right:0;
+      top:0;
+    }
+    header+section{
+      margin-top:126.667px;      
+      background-color:green;
+    }
+    footer{
+      padding:20px;
+      background-color:blue;
+      position:fixed;
+      left:0;
+      right:0;
+      bottom:0;
+    }
+    
+  </style>
+</head>
+<body>
+  <section class="skip">
+    <a href="https://www.naver.com">네이버로 이동</a>
+    <a href="https://www.daum.net">다음으로 이동</a>
+    <a href="https://www.google.com">구글로 이동</a>
+  </section>
+  <section class="wrap">
+    <header>HEADER</header>    
+    <section>
+      <div class="slider">
+        <div class="img-box">이미지1</div>
+        <div class="img-box">이미지2</div>
+        <div class="img-box">이미지3</div>
+        <div class="img-box">이미지4</div>
+        <div class="img-box">이미지5</div>
+      </div>
+    </section>
+    <footer>FOOTER</footer>
+  </section>
+</body>
+</html>

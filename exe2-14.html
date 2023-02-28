@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transition</title>
+  <style>
+    img{
+      width:100%;
+    }
+    .ground{
+      position:fixed;
+      top:50px;
+      right:50px;
+      bottom:50px;
+      left:50px;
+      border:1px solid black;
+    }
+    .cycle{
+      width:200px;
+      height:50px;
+      background:black;
+      position:absolute;
+      left:20px;
+      top:50%;
+      transition:left 3s linear 1s;
+    }
+    .ground:hover .cycle{
+      left:720px;
+    }
+    .wheel{      
+      width:40px;
+      height:40px;
+      position:absolute;
+      left:20px;
+      bottom:-40px;
+      text-indent:-99999px;
+      transition: transform 3s linear 1s;
+    }
+    .ground:hover .wheel{
+      transform:rotate(2016deg);
+    }
+    .wheel2{
+      left:140px;
+    }
+    
+   
+  </style>
+</head>
+<body>
+  <div class="ground">    
+    <div class="cycle">
+      <div class="wheel wheel1">
+        <img src="./img/wheel.svg" alt="바퀴">
+      </div>
+      <div class="wheel wheel2">
+        <img src="./img/wheel.svg" alt="바퀴">
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
