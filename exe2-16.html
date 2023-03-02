@@ -11,6 +11,13 @@
       margin:0;
       padding:0;
     }
+    ul,ol,li{
+      list-style:none;
+    }
+    a{
+      color:#000;
+      text-decoration:none;
+    }
 
     @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
     :root{
@@ -101,22 +108,40 @@
     }
     nav{
       height:calc(100vh - 39.334px);
+      padding:20px;
       position:absolute;
       left:100%;
       right:-100%;
       top:39.334px;      
       background-color:black;
       transition:0.3s;
-    }   
+    }      
+    nav li{
+
+      border-bottom:1px solid #999;
+      padding:6px;      
+    }
+    nav a{      
+      font-size:16px;
+      color:#fff;
+    } 
 
     /* 768이상 */
     @media (min-width:768px){
-      nav{
-        height:30px;        
+      nav{  
+        height:auto;  
+        padding:12px;           
         left:0;
         right:0;     
-        top:-30px        
+        top:-47.333px;            
       }
+      nav li{
+        float:left;
+        width:20%;
+        border-bottom:none;
+        padding:0;  
+        text-align:center;    
+      }     
     }
 
     /* 1200이상 */
@@ -137,9 +162,18 @@
         display:none;
       }
       nav{
+        width:60%;
         left:50%;
         top:50%;
         transform:translate(-50%,-50%);
+        background-color:transparent;
+      }
+      nav a{
+        font-weight:700;
+        color:#222;
+      }
+      .ico-insta{
+        transform:scale(1.2);
       }
     }   
     
@@ -156,7 +190,15 @@
             <span>네비버튼</span>
           </div>
         </div>
-        <nav>NAVIGATION</nav>
+        <nav>
+          <ul class="clearfix">
+            <li><a href="#">NAV01</a></li>
+            <li><a href="#">NAV02</a></li>
+            <li><a href="#">NAV03</a></li>
+            <li><a href="#">NAV04</a></li>
+            <li><a href="#">NAV05</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
     <section></section>
