@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형</title>
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+    .clearfix::after{
+      content:'';
+      display:block;
+      clear:both;
+    }
+    /* 기본스타일 */
+    .wrap{
+      font-weight:400;
+      font-size:14px;
+      color:#333;
+      overflow:hidden;
+    }
+    section,footer{
+      height:1000px;
+    }
+
+    header{
+      border-bottom:1px solid #222;      
+    }
+    .container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:10px 12px;
+      position:relative;
+    }
+    h1{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+    }
+    
+    header p{
+      float:left;
+    }
+    .btn-nav{
+      float:right;
+    }
+    nav{
+      height:calc(100vh - 39.334px);
+      position:absolute;
+      left:100%;
+      right:-100%;
+      top:39.334px;      
+      background-color:black;
+    }
+
+    
+
+    /* 768이상 */
+    @media (min-width:768px){
+      nav{
+        height:30px;        
+        left:0;
+        right:0;     
+        top:-30px        
+      }
+    }
+
+    /* 1200이상 */
+    @media (min-width:1200px){
+      .container{
+        padding-left:24px;
+        padding-right:24px;
+      }
+    }
+   
+    
+  </style>
+</head>
+<body>
+  <section class="wrap">
+    <header class="header">
+      <div class="container">
+        <h1>LOGO</h1>
+        <div class="clearfix">
+          <p>ICON</p>
+          <div class="btn-nav">
+            <span>네비버튼</span>
+          </div>
+        </div>
+        <nav>NAVIGATION</nav>
+      </div>
+    </header>
+    <section></section>
+    <footer></footer>
+  </section>
+</body>
+</html>
