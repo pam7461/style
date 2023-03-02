@@ -56,6 +56,7 @@
       right:-100%;
       top:39.334px;      
       background-color:black;
+      transition:0.3s;
     }   
 
     /* 768이상 */
@@ -90,8 +91,7 @@
         top:50%;
         transform:translate(-50%,-50%);
       }
-    }
-   
+    }   
     
   </style>
 </head>
@@ -102,7 +102,7 @@
         <h1>LOGO</h1>
         <div class="clearfix">
           <p>ICON</p>
-          <div class="btn-nav">
+          <div class="btn-nav" id="tri-nav">
             <span>네비버튼</span>
           </div>
         </div>
@@ -112,5 +112,14 @@
     <section></section>
     <footer></footer>
   </section>
+  <script>
+    let triBtn = document.querySelector('#tri-nav');
+    let tarNav = document.querySelector('nav');
+    triBtn.onclick=function(){
+      tarNav.style.left=0;
+      tarNav.style.right=0;
+      tarNav.style.top='39.334px';
+    }
+  </script>
 </body>
 </html>
