@@ -6,10 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>반응형</title>
   <style>
-    *{
+    *,::before,::after{
       box-sizing:border-box;
       margin:0;
       padding:0;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+    :root{
+      font-family: 'Noto Sans KR', sans-serif;
     }
     .clearfix::after{
       content:'';
@@ -37,17 +42,62 @@
       position:relative;
     }
     h1{
+      font-family:'Climate Crisis', cursive;
+      font-weight:900;
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+    }    
+    .ico-insta{
+      float:left;
+      width:16px;
+      height:16px;
+      border-radius:25%;
+      background:black;  
+      position:relative;    
+    }
+    .ico-insta::before,.ico-insta::after,.ico-insta span{
+      content:'';
+      display:block;
+      width:12px;
+      height:12px;
+      border:1.5px solid white;
+      border-radius:25%;
       position:absolute;
       left:50%;
       top:50%;
       transform:translate(-50%,-50%);
     }
-    
-    header p{
-      float:left;
+    .ico-insta::after{
+      width:6px;
+      height:6px;
+      border-width:1px;
+      border-radius:50%;
+    }
+    .ico-insta span{
+      width:1px;
+      height:1px;
+      border:none;
+      border-radius:50%;
+      background:white;
+      left:11px;
+      top:4.8px;
+      text-indent:-99999px;
     }
     .btn-nav{
-      float:right;
+      float:right;      
+    }
+    .btn-nav::before,.btn-nav::after,.btn-nav span{
+      content:'';
+      display:block;
+      width:3px;
+      height:3px;
+      margin-bottom:3px;
+      border-radius:50%;
+      background:black;
+      text-indent:-999999px;
+      font-size:0;
     }
     nav{
       height:calc(100vh - 39.334px);
@@ -80,7 +130,7 @@
         top:0;
         transform:translate(0,20%);
       }
-      header p{
+      .ico-insta{
         float:right;
       }
       .btn-nav{
@@ -101,7 +151,7 @@
       <div class="container">
         <h1>LOGO</h1>
         <div class="clearfix">
-          <p>ICON</p>
+          <a href="#" class="ico-insta"><span>인스타그램 아이콘</span></a>
           <div class="btn-nav" id="tri-nav">
             <span>네비버튼</span>
           </div>
