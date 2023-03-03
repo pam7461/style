@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날씨</title>
+  <style>
+    :root{
+      font-size:14px;
+      color:#333;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    h1,h2,h3,h4,h5,h6{
+      font-weight:400;
+      font-size:16px;
+    }
+    ul,ol,li{
+      list-style:none;
+    }
+    a{
+      color:#333;
+      text-decoration:none;
+    }
+    img{
+      vertical-align:bottom;
+    }
+    .sec{
+      height:400px;
+      color:#fff;
+    }
+    .sec01{
+      background-color:red;
+    }
+    .sec02{
+      background-color:green;
+    }
+    .sec03{
+      background-color:blue;
+    }
+    .footer{
+      height:100px;
+      background-color:cyan;
+      color:#fff;
+    }
+    .sec,.footer{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    /* 기본스타일 */
+    .wrap{
+      width:100%;
+      overflow:hidden;
+    }
+    .header{
+      border-bottom:1px solid black;
+      padding:12px 0;
+    }
+    .container{
+      max-width:1280px;
+      margin:0 auto;
+      padding:0 12px;
+      display:flex;
+      flex-flow:row wrap;
+      justify-content:space-between;
+    }
+    .btn-header,.icons-sns{
+      width:22.32142857142857%;
+    }
+    h1{
+      width:48.21428571428571%;
+      order:2;
+    }
+    .icons-sns{
+      order:3;
+    }
+    .btn-header{
+      order:1;
+    }
+    nav{
+      order:4;
+    }
+
+    /* 768이상 */
+    @media(min-width:768px){
+
+    }
+
+
+    /* 1280이상 */
+    @media(min-width:1280px){
+      .header{
+        padding:24px 0;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <section class="wrap">
+    <header class="header">
+      <div class="container">
+        <h1><a href="#">forToday</a></h1>
+        <div class="icons-sns">
+          <div class="icon01"><a href="#">facebook</a></div>
+          <div class="icon02"><a href="#">insta</a></div>
+        </div>
+        <div class="btn-header">
+          <div class="btn-nav" title="클릭하면 메뉴열림">네비버튼</div>
+          <div class="logo"><a href="#">로고</a></div>
+        </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="#">기상예측</a></li>
+            <li><a href="#">자연재해</a></li>
+            <li><a href="#">기상특보</a></li>
+            <li><a href="#">실시간 채팅</a></li>
+            <li><a href="#">정보</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="sec sec01">섹션01</section>
+    <section class="sec sec02">섹션02</section>
+    <section class="sec sec03">섹션03</section>
+    <footer class="footer">푸터</footer>
+  </section>
+</body>
+</html>
