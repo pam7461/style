@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex2</title>
+  <style>
+    .btn01:hover ~ .flex-container{
+      flex-wrap:wrap;
+    }
+    .btn02:hover ~ .flex-container{
+      flex-wrap:nowrap;
+    }
+    .btn03:hover ~ .flex-container{
+      flex-wrap:wrap-reverse;
+    }
+    .flex-container{
+      width:500px;
+      margin:0 auto;
+      background-color:aqua;
+      display:flex;
+      flex-direction:row;
+      flex-wrap:nowrap;
+      flex-wrap:wrap;
+      flex-wrap:wrap-reverse;
+    }
+    .flex-item{
+      margin:10px;
+      padding:20px;
+      background-color:white;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn01">보조축사용</button>
+  <button class="btn02">보조축미사용</button>
+  <button class="btn03">꺼꾸로보조축</button>
+  <div class="flex-container">
+    <div class="flex-item">01</div>
+    <div class="flex-item">02</div>
+    <div class="flex-item">03</div>
+    <div class="flex-item">04</div>
+    <div class="flex-item">05</div>
+    <div class="flex-item">06</div>
+    <div class="flex-item">07</div>
+    <div class="flex-item">08</div>
+    <div class="flex-item">09</div>
+    <div class="flex-item">10</div>
+    <div class="flex-item">11</div>
+    <div class="flex-item">12</div>
+  </div>
+</body>
+</html>

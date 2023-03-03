@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex</title>
+  <style>
+    .btn01:hover ~ .flex-box{
+      flex-direction:row;
+    }
+    .btn02:hover ~ .flex-box{
+      flex-direction:row-reverse;
+    }
+    .btn03:hover ~ .flex-box{
+      flex-direction:column;
+    }
+    .btn04:hover ~ .flex-box{
+      flex-direction:column-reverse;
+    }
+    .flex-box{      
+      background-color:aqua;
+
+      display:flex;      
+    }
+    .flex-item{
+      margin:10px;
+      padding:20px;
+      background-color:white;
+    }
+    
+  </style>
+</head>
+<body>
+  <button class="btn01">가로</button>
+  <button class="btn02">거꾸로 가로</button>
+  <button class="btn03">세로</button>
+  <button class="btn04">거꾸로 세로</button>
+  <div class="flex-box">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+  </div>
+</body>
+</html>

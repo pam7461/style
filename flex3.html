@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex3</title>
+  <style>
+    .flex-container{
+      width:600px;
+      margin:0 auto;
+      background-color:chocolate;
+      display:flex;
+    }
+    .flex-item{
+      margin:10px;
+      padding:20px;
+      background-color:white;
+    }
+    button{
+      margin:3px;
+    }
+    /* 주가로/보조X */
+    .btn01:hover~.flex-container{
+      flex-flow:row nowrap;
+    }
+    /* 주가로/보조O */
+    .btn02:hover~.flex-container{
+      flex-flow:row wrap;
+    }
+    /* 주가로/보조반대O */
+    .btn03:hover~.flex-container{
+      flex-flow:row wrap-reverse;
+    }
+    /* 주가로반대/보조X */
+    .btn04:hover~.flex-container{
+      flex-flow:row-reverse nowrap;
+    }
+    /* 주가로반대/보조O */
+    .btn05:hover~.flex-container{
+      flex-flow:row-reverse wrap;
+    }
+    /* 주가로반대/보조반대O */
+    .btn06:hover~.flex-container{
+      flex-flow:row-reverse wrap-reverse;
+    }
+    /* 주세로/보조X */
+    .btn07:hover ~ .flex-container{
+      height:300px;
+      flex-flow:column nowrap;
+    }
+     /* 주세로/보조O */
+     .btn08:hover ~ .flex-container{
+      height:300px;
+      flex-flow:column wrap;
+    }
+    /* 주세로/보조반대O */
+     .btn09:hover ~ .flex-container{
+      height:300px;
+      flex-flow:column wrap-reverse;
+    }
+    /* 주세로반대/보조X */
+    .btn10:hover ~ .flex-container{
+      height:300px;
+      flex-flow:column-reverse nowrap;
+    }
+    .btn11:hover ~ .flex-container{
+      height:300px;
+      flex-flow:column-reverse wrap;
+    }
+    .btn12:hover ~ .flex-container{
+      height:300px;
+      flex-flow:column-reverse wrap-reverse;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn01">주가로/보조X</button>
+  <button class="btn02">주가로/보조O</button>
+  <button class="btn03">주가로/보조반대O</button>
+  <button class="btn04">주가로반대/보조X</button>
+  <button class="btn05">주가로반대/보조O</button>
+  <button class="btn06">주가로반대/보조반대O</button>
+  <button class="btn07">주세로/보조X</button>
+  <button class="btn08">주세로/보조O</button>
+  <button class="btn09">주세로/보조반대O</button>
+  <button class="btn10">주세로반대/보조X</button>
+  <button class="btn11">주세로반대/보조O</button>
+  <button class="btn12">주세로반대/보조반대O</button>
+
+  <div class="flex-container">
+    <div class="flex-item">01</div>
+    <div class="flex-item">02</div>
+    <div class="flex-item">03</div>
+    <div class="flex-item">04</div>
+    <div class="flex-item">05</div>
+    <div class="flex-item">06</div>
+    <div class="flex-item">07</div>
+    <div class="flex-item">08</div>
+    <div class="flex-item">09</div>
+    <div class="flex-item">10</div>
+    <div class="flex-item">11</div>
+    <div class="flex-item">12</div>
+  </div>
+</body>
+</html>

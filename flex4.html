@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Flex</title>
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+    /* 기본스타일 */
+    section{      
+      margin:0 auto;
+      padding:10px;
+      background-color:darkmagenta;
+      display:flex;
+      flex-flow:row wrap;
+    }
+    article{
+      width:100%; 
+      border:1px solid black;     
+      padding:20px;
+      background-color:white;
+    }
+
+    @media(min-width:640px){      
+      article{
+        width:50%;
+      }
+      article:last-child{
+        width:100%;
+      }
+    }
+
+    @media(min-width:960px){
+      article{
+        width:33.3333%;
+      }
+      article:last-child{
+        width:33.3333%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <article>1</article>
+    <article>2</article>
+    <article>3</article>
+  </section>
+</body>
+</html>
