@@ -23,6 +23,7 @@
       text-decoration:none;
     }
     img{
+      width:100%;
       vertical-align:bottom;
     }
     .sec{
@@ -56,6 +57,7 @@
     .header{
       border-bottom:1px solid black;
       padding:12px 0;
+      position:relative;
     }
     .container{
       max-width:1280px;
@@ -63,23 +65,55 @@
       padding:0 12px;
       display:flex;
       flex-flow:row wrap;
-      justify-content:space-between;
     }
     .btn-header,.icons-sns{
-      width:22.32142857142857%;
+      flex:1;
     }
     h1{
-      width:48.21428571428571%;
+      flex:2;
       order:2;
+      font-weight:900;
+      font-size:20px;
+      text-align:center;
     }
     .icons-sns{
       order:3;
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+    }
+    .icons-sns>*{
+      width:16px;
+      margin-left:12px;
     }
     .btn-header{
       order:1;
+      display:flex;
+      align-items:center;
+    }
+    .btn-header>*{
+      width:16px;
+      margin-right:12px;
     }
     nav{
-      order:4;
+      height:calc(100vh - 51px);
+      padding:12px;
+
+      position:absolute;
+      left:-100%;
+      right:100%;
+      top:51px;
+      background-color: black;
+      transition:0.3s;
+    }
+
+    nav li{
+      margin:20px 0;
+      font-size:18px;
+    }
+    nav a{
+      font-weight:500;
+      color:#fff;
     }
 
     /* 768이상 */
@@ -103,14 +137,14 @@
       <div class="container">
         <h1><a href="#">forToday</a></h1>
         <div class="icons-sns">
-          <div class="icon01"><a href="#">facebook</a></div>
-          <div class="icon02"><a href="#">insta</a></div>
+          <div class="icon01"><a href="#"><img src="./images/ico01.png" alt="인스타그램"></a></div>
+          <div class="icon02"><a href="#"><img src="./images/ico02.png" alt="패이스북"></a></div>
         </div>
         <div class="btn-header">
-          <div class="btn-nav" title="클릭하면 메뉴열림">네비버튼</div>
-          <div class="logo"><a href="#">로고</a></div>
+          <div id="btn-nav" class="btn-nav" title="클릭하면 메뉴열림"><img src="./images/btn-nav.png" alt="내비게이션 버튼"></div>
+          <div class="logo"><a href="#"><img src="./images/logo.png" alt="로고"></a></div>
         </div>
-        <nav class="nav">
+        <nav id="nav" class="nav">
           <ul>
             <li><a href="#">기상예측</a></li>
             <li><a href="#">자연재해</a></li>
@@ -126,5 +160,9 @@
     <section class="sec sec03">섹션03</section>
     <footer class="footer">푸터</footer>
   </section>
+  <script>
+    let btnNav = document.querySelector('#btn-nav');
+    let nav = document.querySelector('#nav');
+  </script>
 </body>
 </html>
